@@ -1,0 +1,18 @@
+// interface contains Date property and an abstract function.
+interface ClockInterface {
+    currentTime:Date;
+    setTime(d: Date);
+}
+
+// class has to override two artifacts of the interface in order to implement it.
+class Clock implements ClockInterface {
+    currentTime:Date;
+    setTime(a:Date) {
+        console.log('date:'+a);
+    }
+    constructor (h:number,m:number){}
+}
+
+// Usage
+let clockInst = new Clock(1, 2);
+clockInst.setTime(new Date());
